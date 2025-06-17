@@ -5,15 +5,27 @@ That is, delete the sense_hat.py file that is included in this bundle."""
 import time
 
 from happy import Happy
+from sad import Sad
+from angry import Angry
+# from smiley import Smiley
 
 def main():
-    smiley = Happy()
-
+    smiley = Angry()
     smiley.show()
 
-    time.sleep(1)
+    time.sleep(2)
 
-    smiley.blink()
+    # won't sleep less than a second (incl in blink) - emulator bug?
+    # x= 1
+    # for i in range(15):
+    #     print(x)
+    #     smiley.blink(x)
+    #     time.sleep(x)
+    #     x /= 2
+
+    smiley.blink(0.5)
+    time.sleep(0.5)
+
 
 if __name__ == '__main__':
     ############################################################
